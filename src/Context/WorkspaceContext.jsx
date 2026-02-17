@@ -1,6 +1,7 @@
 import { createContext, useEffect } from "react";
 import useRequest from "../hooks/useRequest";
-import { getWorkspaceList } from "../services/WorkspaceService";
+import { getWorkspaceList } from "../services/workspaceService";
+
 export const WorkspaceContext = createContext(
     {
         workspace_list_loading: false,
@@ -10,7 +11,7 @@ export const WorkspaceContext = createContext(
 )
 
 const WorkspaceContextProvider = ({ children }) => {
-    const {loading, response, error, sendRequest} = useRequest()
+    const { loading, response, error, sendRequest } = useRequest()
 
     useEffect(
         () => {
@@ -20,7 +21,7 @@ const WorkspaceContextProvider = ({ children }) => {
         },
         []
     )
-    
+
 
     const provider_values = {
         workspace_list_loading: loading,
@@ -28,9 +29,9 @@ const WorkspaceContextProvider = ({ children }) => {
         workspace_list_error: error
     }
     return (
-        <WorkspaceContext.Provider 
+        <WorkspaceContext.Provider
             value={provider_values}>
-                {children}
+            {children}
         </WorkspaceContext.Provider>
     )
 }

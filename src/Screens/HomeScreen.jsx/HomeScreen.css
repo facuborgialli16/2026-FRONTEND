@@ -1,0 +1,235 @@
+/* Existing Styles */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; Remove to allow header to be at top */
+    min-height: 100vh;
+    width: 100%;
+    background-color: #4a154b;
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* padding: 20px; Remove global padding to let header go full width */
+    box-sizing: border-box;
+    color: white;
+}
+
+/* Navbar Styles */
+.home-navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #4a154b;
+    /* Match background */
+    box-sizing: border-box;
+    position: relative;
+    /* Ensure it stacks correctly */
+    z-index: 10;
+}
+
+.nav-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-image {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.btn-sales {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s;
+
+
+}
+
+.btn-sales:hover {
+    box-shadow: inset 0 0 0 1px white;
+}
+
+.btn-create-workspace {
+    background-color: white;
+    border: none;
+    color: #4a154b;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-create-workspace:hover {
+    background-color: #f8f8f8;
+}
+
+/* Adjust Content to not hide behind header if we made it fixed, but here it's flex */
+.home-header {
+    text-align: center;
+    margin-top: 60px;
+    /* Push down content a bit */
+    margin-bottom: 40px;
+}
+
+.home-header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    line-height: 46px;
+    letter-spacing: -0.75px;
+    margin-bottom: 10px;
+}
+
+.home-header span {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.workspace-list {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.workspace-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.workspace-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.workspace-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.workspace-avatar {
+    width: 48px;
+    height: 48px;
+    background-color: #f8f8f8;
+    color: #1d1c1d;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 900;
+    border: 1px solid #ddd;
+}
+
+.workspace-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.workspace-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1d1c1d;
+}
+
+.enter-btn {
+    background-color: white;
+    color: #4a154b;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px 16px;
+    border: 2px solid #4a154b;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.enter-btn:hover {
+    background-color: #4a154b;
+    color: white;
+}
+
+.loading-container,
+.error-container,
+.empty-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: white;
+    background-color: #4a154b;
+}
+
+.empty-container span,
+.loading-container span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.error-message {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffcccc;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+}
