@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { useNavigate, useSearchParams } from "react-router"
+import { useNavigate, useSearchParams } from "react-routert "
 import "./AcceptInvitationScreen.css"
 
 const AcceptInvitationScreen = () => {
