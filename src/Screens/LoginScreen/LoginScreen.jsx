@@ -26,10 +26,10 @@ const LoginScreen = () => {
                     className="slack-logo"
                 />
             </header>
-        
-        <main>
-            <h1>Escribe tu correo electronico para conectarte</h1>
-            <p className="login-subhead">O selecciona otra forma de conectarte.</p>
+
+            <main>
+                <h1>Escribe tu correo electronico para conectarte</h1>
+                <p className="login-subhead">O selecciona otra forma de conectarte.</p>
 
                 <form onSubmit={onSubmitForm} className="login-form">
                     <div className="input-group">
@@ -73,8 +73,11 @@ const LoginScreen = () => {
                 <div className="register-link">
                     ¿Nuevo en Slack? <Link to="/register">Crea una cuenta</Link>
                 </div>
+                <div className="register-link" style={{ marginTop: '10px' }}>
+                    ¿Olvidaste tu contraseña? <Link to="/forgot-password">Recupérala aquí</Link>
+                </div>
             </main>
-            
+
             <footer>
                 <a href="">Privacidad y Términos</a>
                 <a href="">Contáctanos</a>
@@ -82,7 +85,7 @@ const LoginScreen = () => {
             </footer>
         </div>
 
-        
+
     )
 }
 

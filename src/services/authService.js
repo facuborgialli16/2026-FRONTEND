@@ -80,3 +80,42 @@ response body example:
     "data": null
 }
 */
+
+export async function forgotPassword(email) {
+    const response_http = await fetch(
+        URL_API + '/api/auth/forgot-password',
+        {
+            method: 'POST',
+            headers: {
+                'x-api-key': import.meta.env.VITE_API_KEY,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email })
+        }
+    )
+    const response = await response_http.json()
+    // It shouldn't throw if it returns 200 with ok: true
+    if (!response.ok) {
+        throw new ServerError(response.message, response.status)
+    }
+    return response
+}
+
+export async function resetPassword(reset_token, password) {
+    const response_http = await fetch(
+        URL_API + '/api/auth/reset-password',
+        {
+            method: 'PUT',
+            headers: {
+                'x-api-key': import.meta.env.VITE_API_KEY,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ reset_token, password })
+        }
+    )
+    const response = await response_http.json()
+    if (!response.ok) {
+        throw new ServerError(response.message, response.status)
+    }
+    return response
+}

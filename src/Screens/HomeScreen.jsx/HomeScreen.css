@@ -233,3 +233,155 @@
     border-radius: 4px;
     font-weight: bold;
 }
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+
+/* Tablet - 1024px */
+@media (max-width: 1024px) {
+    .home-navbar {
+        padding: 20px 24px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .home-header h1 {
+        font-size: 40px;
+        line-height: 42px;
+    }
+
+    .workspace-list {
+        max-width: 500px;
+        padding: 0 24px;
+    }
+}
+
+/* Tablet small - 893px */
+@media (max-width: 893px) {
+    .home-navbar {
+        padding: 16px 20px;
+    }
+
+    .nav-left {
+        gap: 24px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-actions {
+        gap: 10px;
+    }
+
+    .btn-sales,
+    .btn-create-workspace {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .home-header {
+        margin-top: 40px;
+        margin-bottom: 32px;
+        padding: 0 20px;
+    }
+
+    .home-header h1 {
+        font-size: 34px;
+        line-height: 38px;
+    }
+
+    .home-header span {
+        font-size: 16px;
+    }
+
+    .workspace-list {
+        padding: 0 20px;
+    }
+
+    .workspace-item {
+        padding: 16px 20px;
+    }
+
+    .workspace-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .workspace-name {
+        font-size: 16px;
+    }
+}
+
+/* Mobile - 480px */
+@media (max-width: 480px) {
+    .home-navbar {
+        padding: 12px 16px;
+    }
+
+    .nav-image {
+        height: 30px;
+    }
+
+    .btn-sales {
+        display: none;
+    }
+
+    .btn-create-workspace {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+    .home-header {
+        margin-top: 32px;
+        margin-bottom: 24px;
+        padding: 0 16px;
+    }
+
+    .home-header h1 {
+        font-size: 26px;
+        line-height: 32px;
+        letter-spacing: -0.5px;
+    }
+
+    .home-header span {
+        font-size: 14px;
+    }
+
+    .workspace-list {
+        padding: 0 16px;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .workspace-item {
+        padding: 14px 16px;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .enter-btn {
+        width: 100%;
+        text-align: center;
+        padding: 10px 16px;
+    }
+
+    .workspace-avatar {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    .workspace-name {
+        font-size: 15px;
+    }
+}

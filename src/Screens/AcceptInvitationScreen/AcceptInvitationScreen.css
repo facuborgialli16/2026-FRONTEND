@@ -1,0 +1,30 @@
+.accept-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1a1d21;
+    color: white;
+    font-family: sans-serif;
+}
+
+.accept-box {
+    background: #2b2f36;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    width: 400px;
+}
+
+.accept-box h1 {
+    margin-bottom: 20px;
+}
+
+.accept-box button {
+    background: #4a154b;
+    border: none;
+    padding: 12px 20px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}

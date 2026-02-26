@@ -1,6 +1,7 @@
-import { createContext, useEffect } from "react";
+import { createContext, useEffect, useContext } from "react";
 import useRequest from "../hooks/useRequest";
 import { getWorkspaceList } from "../services/workspaceService";
+import { AuthContext } from "./AuthContext";
 
 export const WorkspaceContext = createContext(
     {
@@ -13,13 +14,17 @@ export const WorkspaceContext = createContext(
 const WorkspaceContextProvider = ({ children }) => {
     const { loading, response, error, sendRequest } = useRequest()
 
+    const { session } = useContext(AuthContext)
+
     useEffect(
         () => {
-            sendRequest(
-                getWorkspaceList
-            )
+            if (session) {
+                sendRequest(
+                    getWorkspaceList
+                )
+            }
         },
-        []
+        [session]
     )
 
 

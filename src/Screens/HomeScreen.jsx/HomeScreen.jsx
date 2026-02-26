@@ -56,20 +56,23 @@ const HomeScreen = () => {
             <div className="workspace-list">
                 {
                     workspace_list && workspace_list.data.workspaces && workspace_list.data.workspaces.length > 0 ? (
-                        workspace_list.data.workspaces.map(workspace => (
-                            <div key={workspace.workspace_id} className="workspace-item">
-                                <div className="workspace-info">
-                                    <div className="workspace-avatar">
-                                        {workspace.workspace_title.charAt(0).toUpperCase()}
+                        workspace_list.data.workspaces.map(workspace => {
+                            if (!workspace) return null; // Safety check for null workspaces
+                            return (
+                                <div key={workspace._id} className="workspace-item">
+                                    <div className="workspace-info">
+                                        <div className="workspace-avatar">
+                                            {workspace.title ? workspace.title.charAt(0).toUpperCase() : '?'}
+                                        </div>
+                                        <div className="workspace-details">
+                                            <div className="workspace-name">{workspace.title || 'Untitled'}</div>
+                                            {/* Placeholder for URL if it existed, or just keep name */}
+                                        </div>
                                     </div>
-                                    <div className="workspace-details">
-                                        <div className="workspace-name">{workspace.workspace_title}</div>
-                                        {/* Placeholder for URL if it existed, or just keep name */}
-                                    </div>
+                                    <Link to={'/workspace/' + workspace._id} className="enter-btn">ABRIR</Link>
                                 </div>
-                                <Link to={'/workspace/' + workspace.workspace_id} className="enter-btn">ABRIR</Link>
-                            </div>
-                        ))
+                            );
+                        })
                     ) : (
                         <div className="empty-container">
                             <span>No tienes workspaces</span>
